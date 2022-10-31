@@ -1,5 +1,11 @@
 /* Basic Style */
-body {
+body,
+input,
+button {
+  outline: none;
+}
+
+.page {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
@@ -12,7 +18,7 @@ body {
   text-align: right;
 }
 
-.header img {
+.header__img {
   width: 100%;
 }
 
@@ -42,22 +48,19 @@ body {
   display: flex;
 }
 
-ul {
+#incomplete-tasks, 
+#completed-tasks {
   margin: 0;
-  padding: 0px;
+  padding: 0;
 }
 
-li, 
-h3 {
+.main__title,
+.checkbox__list {
   list-style: none;
 }
 
-input,
-button {
-  outline: none;
-}
 
-button {
+.btn {
   background: none;
   border: 0px;
   color: #888;
@@ -67,14 +70,13 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.btn:hover {
   color: #3a3A3a;
 }
 
 /* Heading */
 
-h3,
-label[for="new-task"] {
+.main__title {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -84,7 +86,8 @@ label[for="new-task"] {
   text-transform: uppercase;
 }
 
-input[type="text"] {
+.main__task-input,
+.checkbox__input {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -97,79 +100,78 @@ input[type="text"] {
   color: #888;
 }
 
-input[type="text"]:focus {
+.main__task-input,
+.checkbox__input:focus {
   color: #333;
 }
 
 /* New Task */
 
-label[for="new-task"] {
+.main__add-task {
   display: block;
   margin: 0 0 20px;
 }
 
-input#new-task {
+#new-task {
   width: 318px;
 }
 
 /* Task list */
 
-li {
+.checkbox__list {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-li > * {
   vertical-align: middle;
 }
 
-li > input[type="checkbox"] {
+
+li > .checkbox__list {
   margin: 0 10px;
 }
 
-li > label {
+.checkbox__task {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-li > input[type="text"] {
+.checkbox__input {
   width: 226px;
 }
 
-button.checkbox__delete img {
+.checkbox__img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-button.checkbox__delete img:hover {
+.checkbox__img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
 
-ul#completed-tasks label {
+#completed-tasks .checkbox__task {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
 
-ul li input[type="text"] {
+.checkbox__input {
   display: none;
 }
 
-ul li.edit-mode input[type="text"] {
+.edit-mode .checkbox__input {
   display: inline-block;
   width: 224px;
 }
 
-ul li.edit-mode label {
+.edit-mode .checkbox__task {
   display: none;
 }

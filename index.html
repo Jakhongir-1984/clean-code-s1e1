@@ -5,49 +5,49 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
 </head>
-<body>
+<body class="page">
   <div class="header">
-    <img src="./eisenhower-matrix.jpg">
+    <img class="header__img" src="./eisenhower-matrix.jpg">
     <a class="header__info" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
   </div>
   <div class="main">
     <p id="main__add-element">
-      <label for="main__title">Add Item</label>
+      <label class="main__title main__add-task" for="main__title">Add Item</label>
       <div class="main__task">
-        <input id="new-task" class="main__task-input" type="text">
-        <button>Add</button>
+        <input class="main__task-input" id="new-task" type="text">
+        <button class="btn">Add</button>
       </div>
     </p>
-    <h3>Todo</h3>
+    <h3 class="main__title">Todo</h3>
     <ul id="incomplete-tasks">
-      <li>
-        <input type="checkbox">
+      <li class="checkbox__list">
+        <input class="checkbox__list-item" type="checkbox">
         <label class="checkbox__task">Pay Bills</label>
-        <input type="text" class="checkbox__input">
-        <button class="checkbox__edit">Edit</button>
-        <button class="checkbox__delete">
-          <img src="./remove.svg">
+        <input class="checkbox__input" type="text">
+        <button class="checkbox__edit btn">Edit</button>
+        <button class="checkbox__delete btn">
+          <img class="checkbox__img" src="./remove.svg">
         </button>
       </li>
-      <li class="edit-mode">
-        <input type="checkbox">
+      <li class="checkbox__list edit-mode">
+        <input class="checkbox__list-item" type="checkbox">
         <label class="checkbox__task">Go Shopping</label>
-        <input type="text" value="Go Shopping" class="checkbox__input">
-        <button class="checkbox__edit">Save</button>
-        <button class="checkbox__delete">
-          <img src="./remove.svg">
+        <input class="checkbox__input" type="text" value="Go Shopping">
+        <button class="checkbox__edit btn">Save</button>
+        <button class="checkbox__delete btn">
+          <img class="checkbox__img" src="./remove.svg">
         </button>
       </li>
     </ul>
-    <h3>Completed</h3>
+    <h3 class="main__title">Completed</h3>
     <ul id="completed-tasks">
-      <li>
-        <input type="checkbox" checked>
+      <li class="checkbox__list">
+        <input class="checkbox__list-item" type="checkbox" checked>
         <label class="checkbox__task">See the Doctor</label>
-        <input type="text" class="checkbox__input">
-        <button class="checkbox__edit">Edit</button>
-        <button class="checkbox__delete">
-          <img src="./remove.svg">
+        <input class="checkbox__input" type="text">
+        <button class="checkbox__edit btn">Edit</button>
+        <button class="checkbox__delete btn">
+          <img class="checkbox__img" src="./remove.svg">
         </button>
       </li>
     </ul>
