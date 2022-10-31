@@ -1,9 +1,4 @@
 /* Basic Style */
-body,
-input,
-button {
-  outline: none;
-}
 
 .page {
   background-color: #f8f8f8;
@@ -22,7 +17,7 @@ button {
   width: 100%;
 }
 
-.header .header__info {
+.header__info {
   font-family: fantasy, cursive;
 }
 
@@ -38,7 +33,9 @@ button {
   margin: 0 auto 0;
 }
 
-.main__task-input {
+.main__task-input,
+.checkbox__input,
+.checkbox__task {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
@@ -54,13 +51,20 @@ button {
   padding: 0;
 }
 
-.main__title,
-.checkbox__list {
+.main__title {
   list-style: none;
 }
 
+.main__task-input,
+.main-btn,
+.checkbox__edit-btn,
+.checkbox__delete-btn {
+  outline: none;
+}
 
-.btn {
+.checkbox__delete-btn,
+.checkbox__edit-btn,
+.main-btn {
   background: none;
   border: 0px;
   color: #888;
@@ -70,7 +74,9 @@ button {
   cursor: pointer;
 }
 
-.btn:hover {
+.checkbox__delete-btn:hover,
+.checkbox__edit-btn:hover,
+.main-btn:hover {
   color: #3a3A3a;
 }
 
@@ -100,7 +106,7 @@ button {
   color: #888;
 }
 
-.main__task-input,
+.main__task-input:focus,
 .checkbox__input:focus {
   color: #333;
 }
@@ -128,8 +134,13 @@ button {
   vertical-align: middle;
 }
 
+.checkbox__task,
+.checkbox__input,
+.checkbox__edit-btn {
+  vertical-align: middle;
+}
 
-li > .checkbox__list {
+.checkbox__list {
   margin: 0 10px;
 }
 
